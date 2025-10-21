@@ -31,7 +31,7 @@ test('Screenshot', async ({page})=>{
     await expect(page.locator('#displayed-text')).toBeHidden()
 })
 
-test.only('Visual tesing', async ({page})=>{
+test.skip('Visual tesing', async ({page})=>{
     await page.goto('https://www.google.com/')
     expect(await page.screenshot()).toMatchSnapshot('landing.png')
 })

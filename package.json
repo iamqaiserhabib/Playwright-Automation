@@ -1,7 +1,6 @@
 {
   "name": "playwright-automation",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test tests/WebApiPart1.spec.js"
@@ -10,11 +9,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.40.0",
+    "@playwright/test": "^1.56.1",
     "@types/node": "^20.9.0",
     "allure-playwright": "^2.9.2"
   },
   "dependencies": {
     "@cucumber/cucumber": "^10.0.1"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "description": ""
 }
