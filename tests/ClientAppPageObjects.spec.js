@@ -31,19 +31,19 @@ for (const data of dataSet) {
     })
 }
 
-customtest.only('Client App login', async ({page, testDataForOrder}) => {
-    const poManager = new POManager(page);
-    const products = page.locator(".card-body");
-    const loginPage = poManager.getLoginPage();
-    await loginPage.goTo();
-    await loginPage.validLogin(testDataForOrder.username, testDataForOrder.password);
-    const dashboardPage = poManager.getDashboardPage();
-    await page.waitForTimeout(2000)
-    await dashboardPage.searchProductAddCart(testDataForOrder.productName);
-    // await page.pause()
-    await dashboardPage.navigateToCart();
+// customtest.skip('Client App login', async ({page, testDataForOrder}) => {
+//     const poManager = new POManager(page);
+//     const products = page.locator(".card-body");
+//     const loginPage = poManager.getLoginPage();
+//     await loginPage.goTo();
+//     await loginPage.validLogin(testDataForOrder.username, testDataForOrder.password);
+//     const dashboardPage = poManager.getDashboardPage();
+//     await page.waitForTimeout(2000)
+//     await dashboardPage.searchProductAddCart(testDataForOrder.productName);
+//     // await page.pause()
+//     await dashboardPage.navigateToCart();
 
-    const cartPage = poManager.getCartPage();
-    await cartPage.VerifyProductIsDisplayed(testDataForOrder.productName);
-    await cartPage.Checkout();
-})
+//     const cartPage = poManager.getCartPage();
+//     await cartPage.VerifyProductIsDisplayed(testDataForOrder.productName);
+//     await cartPage.Checkout();
+// })
