@@ -31,7 +31,7 @@ test('Browser context playwright test', async ({browser}) => {
     console.log(allTitles)
 })
 
-test.only('UI Controls', async ({page}) => {
+test('UI Controls', async ({page}) => {
     await page.on('request', request=> console.log(request.url()))
     await page.route('**/*.css', route=> route.abort())
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
